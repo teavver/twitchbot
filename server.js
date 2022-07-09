@@ -2,8 +2,10 @@ const express = require("express")
 const path = require('path')
 const bot = require('./index')
 
+
 const app = express()
-const port = 3000
+const port = process.env.PORT
+
 
 app.get('/bot', async (req, res) => {
     const channel = req.query.channel
