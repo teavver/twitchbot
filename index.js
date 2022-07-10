@@ -15,7 +15,7 @@ require('dotenv').config()
 
     const opts = {
         identity: {
-          username: 'bot',
+          username: 'teaver2',
           password: token
         },
         channels: [
