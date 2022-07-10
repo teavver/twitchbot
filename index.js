@@ -55,7 +55,7 @@ async function main(channelName, word){
 
     const bots = await Promise.all(
     tokens.map(token => createBot(token))
-    )  
+    )
     
     for (let i = 0; i < outputArray.length; i++) {
         bots[current].say(channelName, outputArray[i])
@@ -69,7 +69,7 @@ async function main(channelName, word){
         bots[i].say(channelName,"!vanish")
         bots[i].disconnect()
         outputArray = []
-        await sleep(1400)
+        await sleep(2000)
     }
 }
 async function sleep(ms) {
