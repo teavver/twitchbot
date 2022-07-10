@@ -1,4 +1,5 @@
 const express = require("express")
+const queue = require('express-queue');
 const path = require('path')
 const bot = require('./index')
 
@@ -13,7 +14,7 @@ app.get('/bot', async (req, res) => {
     await bot.main(channel, word)
     res.send("Executed!")
 })
-// 
+app.use(queue({ activeLimit: 1``, queuedLimit: -1 }));
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.listen(port, () => {

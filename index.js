@@ -69,7 +69,7 @@ async function main(channelName, word){
         bots[i].say(channelName,"!vanish")
         bots[i].disconnect()
         outputArray = []
-        await sleep(1000)
+        await sleep(1400)
     }
 }
 async function sleep(ms) {
